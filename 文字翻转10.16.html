@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+
+	body{
+		padding:200px;
+		color:skyblue;
+	}
+    span{
+		font-size: 80px;
+		font-family: "楷体";
+		position: relative;
+    }
+    span:before,span:after{
+		content:attr(data-q);
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform-origin: left center;
+		transition:all 0.3s linear 0s;
+    }
+    span:before{
+		color:white;
+		z-index: 3;
+		transform:rotateY(8deg);
+    }
+    span:after{
+		color:aquamarine(0,0,0,0.3);
+		z-index:2;
+		transform: rotateY(0deg) scale(1.1, 1);
+    }
+    span:hover:before{
+		transform:rotateY(25deg) skew(0deg, 3deg);
+	}
+	span:hover:after{
+		transform:rotateY(25deg) skew(0deg,20deg);
+	}
+
+
+
+</style>
+
+
+
+</head>
+<body>
+    
+
+    <span data-q="相">相</span>
+	<span data-q="信">信</span>
+	<span data-q="善">善</span>
+	<span data-q="良">良</span>
+	<span data-q="它">它</span>
+	<span data-q="是">是</span>
+	<span data-q="生">生</span>
+    <span data-q="命">命</span>
+    <span data-q="的">的</span>
+	<span data-q="血">血</span>
+	<span data-q="脉">脉</span>
+
+    
+</body>
+</html>
